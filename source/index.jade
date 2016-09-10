@@ -1,0 +1,28 @@
+doctype html
+html(ng-app='app')
+  head
+    //- base(href="/")
+    meta(charset='utf-8')
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width')
+    link(rel="stylesheet" href="application.min.css")
+  
+  title Ecommerce
+  
+  // bower:css
+  // endbower
+
+  body(ng-controller='MainController as main' ng:class="{'no-sidebar': !main.isLogged()}")
+    navbar
+    .container
+      ui-view
+      hr
+      footer
+        .row
+          .col-lg-12
+            p
+              | Copyright &copy; Ecommerce 2016
+        
+  // bower:js
+  // endbower
+
+  script(src='application.js')
