@@ -11,7 +11,7 @@
   "deploy" : {
     "production" : {
       "user" : "root",
-      "host" : "162.243.31.163",
+      "host" : "192.168.1.9",
       "ref"  : "origin/master",
       "repo" : "git@github.com:RoganMelo/ecommerce.git",
       "path" : "/opt/college/production/ecommerce",
