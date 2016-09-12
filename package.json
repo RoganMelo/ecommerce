@@ -30,6 +30,7 @@
     "wiredep": "^2.2.2"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "gulp-stylus": "^2.2.0"
   }
 }
