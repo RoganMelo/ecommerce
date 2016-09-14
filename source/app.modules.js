@@ -2,5 +2,6 @@
 
 angular.module('app.modules', [
   'app.main',
-  'app.home'
+  'app.home',
+  'app.contact'
 ]);
