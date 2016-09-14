@@ -34,4 +34,4 @@ angular.module('app', [
 ])
   .run(Run)
   .config(Config)
-  .value('apiEndPoint', 'localhost:3030');
+  .value('apiEndPoint', '192.168.1.12:3030');
