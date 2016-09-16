@@ -4,7 +4,7 @@ class Feathers {
     this.$q = $q;
     this.$rootScope = $rootScope;
 
-    const host = 'http://192.168.1.12:3030';
+    const host = 'http://localhost:3030';
     const socket = io(host);
 
     const app = feathers()
