@@ -27,10 +27,7 @@ class ContactController {
      title: "Contato efetuado com sucesso!",
      text: "Em breve será respondido!",
      type: "success"
-    },
-    () => {
-      window.history.back();
-    });
+    }, () => window.history.back());
   };
 
   errorAlert(error) {
@@ -38,8 +35,7 @@ class ContactController {
      title: "Opps",
      text: error.message,
      type: "error"
-    },
-    () => {});
+    }, () => {});
   };
 }
 

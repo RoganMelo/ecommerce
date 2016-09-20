@@ -1,7 +1,8 @@
 class RegisterController {
-  constructor(Feathers, SweetAlert, $localStorage) {
+  constructor(Feathers, SweetAlert, $localStorage, $state) {
     this.SweetAlert = SweetAlert;
     this.$localStorage = $localStorage;
+    this.$state = $state;
 
     this.user = {};
 
@@ -23,12 +24,8 @@ class RegisterController {
       			this.$localStorage.user = this.app.get('user');
       			this.$localStorage.token = this.app.get('token');
 
-      			this.$state.go('home');
-      		}).catch(error => {
-      			this.errorAlert(error);
+            this.successAlert();
       		});
-          console.log(response);
-          this.successAlert();
         })
         .catch(error => {
           console.log(error);
@@ -41,13 +38,10 @@ class RegisterController {
 
   successAlert() {
     this.SweetAlert.swal({
-     title: "Sucesso!",
-     text: "Cadastro efetuado com sucesso!",
+     title: "Success!",
+     text: "Registration successfully complete!",
      type: "success"
-    },
-    () => {
-      window.history.back();
-    });
+    }, () => this.$state.go('home'));
   };
 
   errorAlert(error) {
@@ -55,8 +49,7 @@ class RegisterController {
      title: "Opps",
      text: error.message,
      type: "error"
-    },
-    () => {});
+    }, () => {});
   };
 }
 
