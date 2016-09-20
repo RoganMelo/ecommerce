@@ -11,8 +11,8 @@ html(ng-app='app')
   // bower:css
   // endbower
 
-  body(ng-controller='MainController as main' ng:class="{'no-sidebar': !main.isLogged()}")
-    navbar
+  body(ng-controller='MainController as main')
+    navbar(ng-class="{'no-sidebar': !main.isLogged()}")
     .container
       ui-view
       .clearfix

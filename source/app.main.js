@@ -2,26 +2,26 @@
 const Run = ($rootScope, Auth, $state) => {
   // return amMoment.changeLocale('pt-br');
 
-  // $rootScope.$on('$stateChangeStart', (event, toState) => {
-  //   if ((toState.name !== 'login') && (toState.name !== 'register')) {
-  //     if (!Auth.isLogged()) {
-  //       event.preventDefault();
-  //       $state.go('login');
-  //     }
-  //   }
-  // });
+  $rootScope.$on('$stateChangeStart', (event, toState) => {
+    if ((toState.name !== 'login') && (toState.name !== 'register')) {
+      if (!Auth.isLogged()) {
+        event.preventDefault();
+        $state.go('login');
+      }
+    }
+  });
 };
 
 /* @ngInject */
 const Config = ($stateProvider, $locationProvider, $urlRouterProvider) => {
   $stateProvider.state('app', {
-    url: '/home',
-    controller: 'HomeController',
+    url: '/login',
+    controller: 'LoginController',
     controllerAs: 'root',
-    templateUrl: 'home.view.html'
+    templateUrl: 'login.view.html'
   });
 
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/login');
 
   //using HTML5 History API
   //$locationProvider.html5Mode(true);
