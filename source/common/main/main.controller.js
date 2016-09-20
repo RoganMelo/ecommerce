@@ -4,8 +4,10 @@ class MainController {
     this.Auth = Auth;
     this.$localStorage = $localStorage;
     this.$state = $state;
+  }
 
-    this.user = $localStorage.user;
+  getActualUser() {
+    return $localStorage.user;
   }
 
   isLogged() {
