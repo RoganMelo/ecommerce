@@ -6,8 +6,8 @@ class MainController {
     this.$state = $state;
   }
 
-  getActualUser() {
-    return this.$localStorage.user;
+  getUsername() {
+    return this.$localStorage.user.name;
   }
 
   isLogged() {
