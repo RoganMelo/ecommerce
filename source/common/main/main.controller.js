@@ -7,7 +7,7 @@ class MainController {
   }
 
   getActualUser() {
-    return $localStorage.user;
+    return this.$localStorage.user;
   }
 
   isLogged() {
