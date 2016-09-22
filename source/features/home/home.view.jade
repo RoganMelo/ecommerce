@@ -9,49 +9,18 @@
 
   .row
     .col-lg-12
-      h3 Latest Features
+      h3 Products
 
   .row.text-center
 
-    .col-md-3.col-sm-6.hero-feature
+    .col-md-3.col-sm-6.hero-feature(ng-repeat='product in vm.products')
       .thumbnail
         img(src="http://placehold.it/800x500" alt="")
         .caption
-          h3 Feature Label
+          h3 {{product.name}}
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          p
-            a.btn.btn-primary(href="#") Buy Now!
-            &nbsp
-            a.btn.btn-default(href="#") More Info
-
-    .col-md-3.col-sm-6.hero-feature
-      .thumbnail
-        img(src="http://placehold.it/800x500" alt="")
-        .caption
-          h3 Feature Label
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          p
-            a.btn.btn-primary(href="#") Buy Now!
-            &nbsp
-            a.btn.btn-default(href="#") More Info
-
-    .col-md-3.col-sm-6.hero-feature
-      .thumbnail
-        img(src="http://placehold.it/800x500" alt="")
-        .caption
-          h3 Feature Label
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          p
-            a.btn.btn-primary(href="#") Buy Now!
-            &nbsp
-            a.btn.btn-default(href="#") More Info
-
-    .col-md-3.col-sm-6.hero-feature
-      .thumbnail
-        img(src="http://placehold.it/800x500" alt="")
-        .caption
-          h3 Feature Label
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          h3
+            strong R$ {{product.price}}
           p
             a.btn.btn-primary(href="#") Buy Now!
             &nbsp

@@ -7,7 +7,10 @@ class MainController {
   }
 
   getUsername() {
-    return this.$localStorage.user.name;
+    if(this.$localStorage.user)
+      return this.$localStorage.user.name;
+    else
+      return '';
   }
 
   isLogged() {

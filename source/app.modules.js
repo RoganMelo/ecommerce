@@ -5,5 +5,6 @@ angular.module('app.modules', [
   'app.register',
   'app.login',
   'app.home',
-  'app.contact'
+  'app.contact',
+  'app.product'
 ]);
