@@ -8,7 +8,7 @@
           input.form-control.input-lg(type='email', ng-model='vm.user.email')
         .form-group
           label PASSWORD
-          a.pull-right(href='#') Forgot password?
+          a.pull-right(href='#', tabindex='-1') Forgot password?
           input.form-control.input-lg(type='password', ng-model='vm.user.password')
         .form-group
           button.btn.btn-success.btn-lg.btn-block(type='submit', ng-click='vm.auth()') LOGIN
